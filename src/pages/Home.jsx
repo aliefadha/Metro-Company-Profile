@@ -390,13 +390,13 @@ const Home = () => {
                                     <div className="flex gap-2">
                                         {item.r_service.map((service, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            {service.title === "UI UX Design" && (
+                                            {service.title === "UI - UX Design" && (
                                             <img src={figma} alt="UI/UX" className="w-[20px] h-[20px]" />
                                             )}
-                                            {service.title === "Web Development" && (
+                                            {service.title === "Website Development" && (
                                             <img src={web} alt="Web" className="w-[20px] h-[20px]" />
                                             )}
-                                            {service.title === "Android Development" && (
+                                            {service.title === "Mobile Development" && (
                                             <img src={android} alt="Android" className="w-[20px] h-[20px]" />
                                             )}
                                         </div>
