@@ -64,7 +64,9 @@ const DetailProject = () => {
 
     const indexOfLastItem = currentPage * itemPerPage;
     const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    const currentProjects = projects.slice(indexOfFirstItem, indexOfLastItem);
+    const currentProjects = projects && projects.length > 0 
+    ? projects.slice(indexOfFirstItem, indexOfLastItem) 
+    : [];
 
     const location = useLocation();
     useEffect(() => {
@@ -194,7 +196,7 @@ const DetailProject = () => {
                     )}
                 </div>
                 <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
-                    {projects.length > itemPerPage && (
+                    {projects && projects.length > itemPerPage && (
                         <NextUIPagination
                             total={Math.ceil(projects.length / itemPerPage)}
                             initialPage={1}

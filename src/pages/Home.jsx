@@ -161,7 +161,9 @@ const Home = () => {
 
     const indexOfLastItem = currentPage * itemPerPage;
     const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    const currentProjects = projects.slice(indexOfFirstItem, indexOfLastItem);
+    const currentProjects = projects && projects.length > 0 
+    ? projects.slice(indexOfFirstItem, indexOfLastItem) 
+    : [];
 
     useEffect(() => {
         const fetchData = async () => {
@@ -197,7 +199,7 @@ const Home = () => {
         setActiveCard(activeCard === id ? null : id); // Toggle activeCard
     };
 
-    const repeatedClients = [...clients, ...clients, ...clients];
+    const repeatedClients = [...(clients || []), ...(clients || []), ...(clients || [])];
     return(
         <div>
             {/* Hero */}
@@ -415,7 +417,7 @@ const Home = () => {
                     )}
                 </div>
                 <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
-                    {projects.length > itemPerPage && (
+                    {projects && projects.length > itemPerPage && (
                         <NextUIPagination
                             total={Math.ceil(projects.length / itemPerPage)}
                             initialPage={1}

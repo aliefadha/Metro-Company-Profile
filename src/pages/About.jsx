@@ -43,7 +43,9 @@ const About = () => {
 
     const indexOfLastItem = currentPage * itemPerPage;
     const indexOfFirstItem = indexOfLastItem - itemPerPage;
-    const currentTeams = teams.slice(indexOfFirstItem, indexOfLastItem);
+    const currentTeams = teams && teams.length > 0 
+    ? teams.slice(indexOfFirstItem, indexOfLastItem) 
+    : [];
 
      useEffect(() => {
         const fetchData = async () => {
@@ -253,7 +255,7 @@ const About = () => {
                     )}
                 </div>
                 <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">
-                    {teams.length > itemPerPage && (
+                    {teams && teams.length > itemPerPage && (
                         <NextUIPagination
                             total={Math.ceil(teams.length / itemPerPage)}
                             initialPage={1}
