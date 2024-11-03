@@ -208,46 +208,48 @@ const Home = () => {
                 <Nav/>
 
                 {/* Hero */}
-                <div className="flex gap-2 container mx-auto mt-40 text-center flex-col lg:flex-row lg:mt-52 px-5 lg:text-start">
-                    <div className="order-last lg:order-first lg:w-1/2 lg:mt-12 lg:ps-12">
-                        <motion.p className="text-3xl lg:text-5xl font-bold text-slate-700" variants={ani} transition={{duration: 1, delay: 0.3, type: "spring"}} whileInView={"visible"} initial={"hidden"} viewport={{once: false, amount: 0.5}}>Metro Indonesian <span className="text-[#23F9B5] drop-shadow-img">Software</span></motion.p>
-                        <motion.p className="my-3 text-slate-500" transition={{duration: 1, delay: 0.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>Merupakan perusahaan jasa pembuatan website, aplikasi mobile, dan sistem informasi di Kota Padang. Kami berkomitmen menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
-                        <motion.div transition={{duration: 1, delay: 0.9, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>
-                            <Button as={Link} to={"/about"} className=" bg-[#A149FA] font-bold text-white" size="md" variant="shadow">Get Started</Button>
-                        </motion.div>
-                    </div>
-                    <div className="order-first lg:order-last lg:w-1/2 hidden md:block">
-                        <Background />
+                <div className="container mx-auto text-center lg:text-start mt-32 2xl:mt-36">
+                    <div className="flex gap-16 justify-center flex-col lg:flex-row lg:ps-5 2xl:ps-28">
+                        <div className="order-last lg:order-first lg:w-1/2 lg:mt-12 flex flex-col justify-center">
+                            <p className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700">Metro Indonesian <span className="text-[#23F9B5] drop-shadow-img">Software</span></p>
+                            <motion.p className="my-3 text-slate-500 text-sm md:text-base lg:text-sm xl:text-base px-5 md:px-10 lg:px-0" transition={{duration: 1, delay: 0.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>Merupakan perusahaan jasa pembuatan website, aplikasi mobile, dan sistem informasi di Kota Padang. Kami berkomitmen menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
+                            <motion.div transition={{duration: 1, delay: 0.9, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>
+                                <Button as={Link} to={"/about"} className=" bg-[#A149FA] font-bold text-white" size="md" variant="shadow">Get Started</Button>
+                            </motion.div>
+                        </div>
+                        <div className="order-first lg:order-last lg:w-1/2 hidden md:block">
+                            <Background />
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Intro */}
-            <div className="container mx-auto md:mt-32 lg:mt-0 lg:px-5 overflow-hidden xl:mt-72 2xl:mt-32">
+            <div className="container mx-auto overflow-hidden mt-20 px-5 2xl:max-w-[68%] 2xl:px-0">
                 <div className="flex gap-16 justify-center flex-col lg:flex-row">
-                    <motion.div className="overflow-hidden rounded-2xl max-w-[500px] mx-auto lg:mx-0 order-last lg:order-first" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: false, amount: 0.5}}>
+                    <motion.div className="overflow-hidden rounded-2xl max-w-[500px] xl:min-w-[600px] xl:max-h-[300px] mx-auto lg:mx-0 order-last lg:order-first" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: false, amount: 0.5}}>
                         <img src={intro} alt="" className="object-fit-cover w-full" />
                     </motion.div>
                     <div className="mx-5 text-center lg:w-1/2 lg:mx-0 lg:text-start order-first lg:order-last">
-                        <motion.p className="text-2xl font-bold text-[#A149FA] mt-10" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>Introduction</motion.p>
-                        <motion.p className="font-bold text-3xl text-[#45474B]" transition={{duration: 1, delay: 1.4, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>Get To Know Us!</motion.p>
+                        <motion.p className="text-xl 2xl:text-2xl text-[#A149FA] mt-10 lg:mt-5" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: false, amount: 0.5}}>Introduction</motion.p>
+                        <motion.p className="text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold text-[#45474B]" transition={{duration: 1, delay: 1.4, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>Get To Know Us!</motion.p>
                         <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3 mx-auto lg:mx-0" transition={{duration: 1, delay: 1.8, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
-                        <motion.p className="text-slate-500" transition={{duration: 1, delay: 1.9, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: false, amount: 0.5}}>Metro Indonesian Software merupakan sebuah perusahaan yang berfokus pada pengembangan perangkat lunak dan solusi teknologi dengan visi untuk menjadi perusahaan terkemuka di Indonesia, menggabungkan inovasi dan keahlian dalam pengembangan perangkat lunak dengan kebanggaan atas identitas Indonesia.</motion.p>
+                        <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1.9, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: false, amount: 0.5}}>Metro Indonesian Software merupakan sebuah perusahaan yang berfokus pada pengembangan perangkat lunak dan solusi teknologi dengan visi untuk menjadi perusahaan terkemuka di Indonesia, menggabungkan inovasi dan keahlian dalam pengembangan perangkat lunak dengan kebanggaan atas identitas Indonesia.</motion.p>
                     </div>
                 </div>
             </div>
 
             {/* Contact */}
-            <div className="container mx-auto mt-32 max-w-[68%]">
+            <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <motion.div className="relative flex justify-center" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -100 }} viewport={{once: true, amount: 0.5}}>
                     <img src={bg} alt="" className="object-fit-cover w-full h-[200px] rounded-3xl shadow-lg" />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5 px-12">
-                        <div className="flex justify-between items-center xl:py-8 flex-col md:flex-row">
-                            <div className="text-center md:w-1/2 md:text-start">
-                                <p className="text-white lg:text-2xl font-thin">Let's Work Together</p>
-                                <p className="text-[#23F9B5] lg:text-3xl font-semibold mt-1">Metro Indonesian Software</p>
+                        <div className="flex justify-between items-center md:py-6 xl:py-8 flex-col md:flex-row">
+                            <div className="text-center md:w-2/3 md:text-start">
+                                <p className="text-white md:text-2xl">Let's Work Together</p>
+                                <p className="text-[#23F9B5] md:text-3xl font-semibold mt-1">Metro Indonesian Software</p>
                             </div>
-                            <div className="md:w-1/2 flex justify-end mt-3 md:mt-0">
+                            <div className="md:w-1/3 flex justify-end mt-3 md:mt-0">
                                 <Button as={Link} to="/contact" className="font-bold text-white border-[#23F9B5] hover:bg-[#23F9B5] rounded-full" size="lg" variant="bordered">Contact Us</Button>
                             </div>
                         </div>
@@ -256,9 +258,9 @@ const Home = () => {
             </div>
 
             {/* Our Service */}
-            <div className="container mx-auto mt-32 max-w-[68%]">
+            <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
-                    <p className="font-bold text-3xl text-[#45474B]">Our Services</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Our Services</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
                 </div>
                 <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12">
@@ -298,7 +300,7 @@ const Home = () => {
             {/* Happy Clients */}
             <div className="mt-32 overflow-hidden">
                 <div className="text-center">
-                    <p className="font-bold text-3xl text-[#45474B]">Happy Clients</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Happy Clients</p>
                     <motion.div 
                         className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" 
                         transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 100 }} 
@@ -364,12 +366,12 @@ const Home = () => {
             </div>
 
             {/* Project's Done */}
-            <div className="container mx-auto mt-20">
+            <div className="container mx-auto mt-20 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
-                    <p className="font-bold text-3xl text-[#45474B]">Project's Done</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Project's Done</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
                 </div>
-                <div className="gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12 mx-5 xl:mx-0">
+                <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 mx-5 xl:mx-0">
                     {currentProjects && currentProjects.length > 0 ? (
                         currentProjects.map((item, index) => (
                         <motion.div key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}>
@@ -378,14 +380,14 @@ const Home = () => {
                             <CardBody className="overflow-visible p-0">
                                 <Image
                                 shadow="sm"
-                                radius="lg"
                                 width="100%"
+                                height="70%"
                                 alt={item.title}
-                                className="w-full object-cover h-[250px]"
+                                className="w-full object-cover h-[250px] rounded-none"
                                 src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${item.img}`}
                                 />
 
-                                <div className="flex justify-between px-5 pt-5 pb-2">
+                                <div className="flex justify-between px-5 pt-5 pb-2 text-sm">
                                     <p className="text-slate-800 font-semibold text-center">{item.title && item.title.length > 15 ? `${item.title.substring(0, 15)}...` : item.title}</p>
                                     <div className="flex gap-2">
                                         {item.r_service.map((service, index) => (
@@ -404,7 +406,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div className="px-5 pb-5 min-h-[60px]">
+                                <div className="px-5 min-h-[40px] text-xs">
                                     <p className="text-default-500 text-small">{item.description && item.description.length > 80 ? `${item.description.substring(0, 80)}...` : item.description}</p>
                                 </div>
                             </CardBody>
@@ -430,9 +432,9 @@ const Home = () => {
             </div>
 
             {/* What People Say */}
-            <div className="container mx-auto mt-32 px-10 xl:px-0">
+            <div className="container mx-auto mt-32 px-10 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
-                    <p className="font-bold text-3xl text-[#45474B]">What People Say About Us</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">What People Say About Us</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
                 </div>
                 <Swiper
@@ -453,11 +455,11 @@ const Home = () => {
                             slidesPerView: 2,
                             spaceBetween: 20,
                         },
-                        768: {   // untuk layar tablet
+                        1024: {   // untuk layar tablet
                             slidesPerView: 3,
                             spaceBetween: 30,
                         },
-                        1024: {  // untuk layar desktop
+                        1366: {  // untuk layar desktop
                             slidesPerView: 4,
                             spaceBetween: 40,
                         },
@@ -465,7 +467,7 @@ const Home = () => {
                 >
                         {testimonies && testimonies.length > 0 ? (
                             testimonies.map((item) => (
-                                <SwiperSlide key={item.id}>
+                                <SwiperSlide key={item.id} className="py-5">
                                     <Card shadow="sm" isPressable onPress={() => console.log("item pressed")} className="w-full h-full">
                                         <CardBody className="overflow-visible p-5">
                                             <div className="relative">
@@ -477,9 +479,9 @@ const Home = () => {
                                                     </div>
                                                     <div className="">
                                                         <p className="text-slate-800 font-semibold">
-                                                            {item.name && item.name.length > 8 ? item.name.substring(0, 10) + "..." : item.name}
+                                                            {item.name && item.name.length > 20 ? item.name.substring(0, 20) + "..." : item.name}
                                                         </p>
-                                                        <p className="text-default-500 text-xs">{item.title && item.title.length > 15 ? item.title.substring(0, 15) + "..." : item.title}</p>
+                                                        <p className="text-default-500 text-xs">{item.title && item.title.length > 20 ? item.title.substring(0, 20) + "..." : item.title}</p>
                                                     </div>
                                             </div>
 

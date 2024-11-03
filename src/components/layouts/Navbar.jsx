@@ -1,5 +1,5 @@
 import { IoHome } from "react-icons/io5";
-import logo from "../../../public/images/metrologo.png";
+import logo from "../../../public/images/metrologo2.png";
 import { Link } from "react-router-dom";
 import { MdContactless } from "react-icons/md";
 import { Button } from "@nextui-org/react";
