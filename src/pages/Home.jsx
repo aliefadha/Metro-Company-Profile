@@ -217,7 +217,7 @@ const Home = () => {
                                 <Button as={Link} to={"/about"} className=" bg-[#A149FA] font-bold text-white" size="md" variant="shadow">Get Started</Button>
                             </motion.div>
                         </div>
-                        <div className="order-first lg:order-last lg:w-1/2 hidden md:block">
+                        <div className="order-first lg:order-last lg:w-1/2">
                             <Background />
                         </div>
                     </div>
@@ -240,7 +240,7 @@ const Home = () => {
             </div>
 
             {/* Contact */}
-            <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
+            <div className="container mx-auto mt-36 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <motion.div className="relative flex justify-center" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -100 }} viewport={{once: true, amount: 0.5}}>
                     <img src={bg} alt="" className="object-fit-cover w-full h-[200px] rounded-3xl shadow-lg" />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5 px-12">

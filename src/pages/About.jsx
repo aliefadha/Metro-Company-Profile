@@ -133,13 +133,13 @@ const About = () => {
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Dengan biaya produksi yang lebih rendah, kami dapat memberikan solusi perangkat lunak berkualitas tinggi dengan harga yang lebih terjangkau, memungkinkan pengguna untuk mengoptimalkan pengeluaran.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
-                        <motion.img src={LowCost} alt="" className="w-[350px]" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
+                        <motion.img src={LowCost} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                 </div>
                 {/* Quality */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 justify-center">
                    <div className="w-1/3 md:w-1/3 flex justify-center md:justify-end">
-                        <motion.img src={Quality} alt="" className="w-[350px]" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
+                        <motion.img src={Quality} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                     <div className="flex flex-col justify-center w-2/3 md:w-1/3 px-5 md:px-0">
                         <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>2. Commitment to Quality</motion.p>
@@ -153,13 +153,13 @@ const About = () => {
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Tim yang terampil dan berpengalaman dalam pengembangan software, sehingga produk yang dihasilkan memiliki kualitas dan performa yang unggul.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
-                        <motion.img src={Professional} alt="" className="w-[350px]" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
+                        <motion.img src={Professional} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                 </div>
                 {/* Up to date */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 justify-center">
                    <div className="w-1/3 md:w-1/3 flex justify-center md:justify-end">
-                        <motion.img src={Update} alt="" className="w-[350px]" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
+                        <motion.img src={Update} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                     <div className="flex flex-col justify-center w-2/3 md:w-1/3 px-5 md:px-0">
                         <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>4. Up to date</motion.p>
@@ -173,7 +173,7 @@ const About = () => {
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Kemanan data menjadi prioritas utama. Kami memastikan untuk melindungi data sensitif klien dan mengimplementasikan standar keamanan terkini.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
-                        <motion.img src={Security} alt="" className="w-[350px]" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
+                        <motion.img src={Security} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                 </div>
             </div>
@@ -185,15 +185,15 @@ const About = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5 px-12">
                         <div className="md:flex justify-between items-center py-8 hidden">
                             <div className="w-1/3 text-center">
-                                <p className="text-[#23F9B5] text-3xl mt-1">{progress.workhours}+</p>
+                                <p className="text-[#23F9B5] text-5xl mt-1">{progress.workhours}+</p>
                                 <p className="text-white text-lg">{progress.workhoursDesc}</p>
                             </div>
                             <div className="w-1/3 text-center">
-                                <p className="text-[#23F9B5] text-3xl mt-1">{progress.projectTotal}+</p>
+                                <p className="text-[#23F9B5] text-5xl mt-1">{progress.projectTotal}+</p>
                                 <p className="text-white text-lg">{progress.projectDesc}</p>
                             </div>
                             <div className="w-1/3 text-center">
-                                <p className="text-[#23F9B5] text-3xl mt-1">{progress.clientTotal}+</p>
+                                <p className="text-[#23F9B5] text-5xl mt-1">{progress.clientTotal}+</p>
                                 <p className="text-white text-lg">{progress.clientDesc}</p>
                             </div>
                         </div>
@@ -202,19 +202,19 @@ const About = () => {
                             <Swiper spaceBetween={50} slidesPerView={1} modules={[Autoplay]} autoplay={{ delay: 1000 }}>
                                 <SwiperSlide>
                                     <div className="text-center">
-                                        <p className="text-[#23F9B5] text-3xl mt-1">{progress.workhours}+</p>
+                                        <p className="text-[#23F9B5] text-5xl mt-1">{progress.workhours}+</p>
                                         <p className="text-white text-lg">{progress.workhoursDesc}</p>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="text-center">
-                                        <p className="text-[#23F9B5] text-3xl mt-1">{progress.projectTotal}+</p>
+                                        <p className="text-[#23F9B5] text-5xl mt-1">{progress.projectTotal}+</p>
                                         <p className="text-white text-lg">{progress.projectDesc}</p>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className="text-center">
-                                        <p className="text-[#23F9B5] text-3xl mt-1">{progress.clientTotal}+</p>
+                                        <p className="text-[#23F9B5] text-5xl mt-1">{progress.clientTotal}+</p>
                                         <p className="text-white text-lg">{progress.clientDesc}</p>
                                     </div>
                                 </SwiperSlide>

@@ -111,7 +111,7 @@ const DetailProject = () => {
             </div>
 
             {/* Detail */}
-            <div className="container mx-auto mt-20 px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] lg:mt-0">
+            <div className="container mx-auto mt-32 px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] lg:mt-0">
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 xl:gap-16 items-center md:justify-center">
                     <div className="overflow-hidden rounded-2xl max-w-[600px] max-h-[400px] mx-3 md:mx-0">
                         <img src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${project.img}`} alt="" className="object-cover w-full shadow-lg" />
@@ -143,7 +143,7 @@ const DetailProject = () => {
             </div>
 
             {/* Project's Done */}
-            <div className="container mx-auto mt-20 px-5 2xl:px-0 2xl:max-w-[68%]">
+            <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">More Project's Done</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
