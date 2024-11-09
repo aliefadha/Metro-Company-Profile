@@ -92,7 +92,7 @@ const DetailProject = () => {
     return (
         <div>
             {/* Hero */}
-            <div className="banner2">
+            <div className="banner2 mb-10">
                 <div className="pb-5"></div>
                 <Nav />
                 {/* Hero */}
@@ -111,7 +111,7 @@ const DetailProject = () => {
             </div>
 
             {/* Detail */}
-            <div className="container mx-auto mt-32 px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] lg:mt-0">
+            <div className="container mx-auto px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] lg:mt-0">
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 xl:gap-16 items-center md:justify-center">
                     <div className="overflow-hidden rounded-2xl max-w-[600px] max-h-[400px] mx-3 md:mx-0">
                         <img src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${project.img}`} alt="" className="object-cover w-full shadow-lg" />

@@ -1,6 +1,7 @@
 import Ig from "../../../public/images/ig.svg";
 import Linkedin from "../../../public/images/linkedin.svg";
 import Fb from "../../../public/images/fb.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return(
@@ -21,10 +22,10 @@ const Footer = () => {
 
                         <div className="lg:w-1/4 px-5 2xl:px-0">
                             <p className="text-[#23F9B5] text-lg lg:text-2xl">Quick Links</p>
-                            <div className="bg-white h-[1px] max-w-[100px] mt-2"></div>
-                            <p className="text-white mt-2 text-xs lg:text-sm">Beranda</p>
-                            <p className="text-white mt-2 text-xs lg:text-sm">Tentang Kami</p>
-                            <p className="text-white mt-2 text-xs lg:text-sm">Kontak</p>
+                            <div className="bg-white h-[1px] max-w-[100px] my-2"></div>
+                            <Link to="/" className="text-white mt-2 text-xs lg:text-sm hover:text-[#23F9B5]">Beranda</Link> <br />
+                            <Link to="/about" className="text-white mt-2 text-xs lg:text-sm hover:text-[#23F9B5]">Tentang Kami</Link> <br />
+                            <Link to="/contact" className="text-white mt-2 text-xs lg:text-sm hover:text-[#23F9B5]">Kontak</Link>
                         </div>
 
                         <div className="lg:w-1/4 px-5 2xl:px-0">

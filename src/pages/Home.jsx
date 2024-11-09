@@ -225,7 +225,7 @@ const Home = () => {
             </div>
 
             {/* Intro */}
-            <div className="container mx-auto overflow-hidden mt-20 px-5 2xl:max-w-[68%] 2xl:px-0">
+            <div className="container mx-auto overflow-hidden px-5 2xl:max-w-[68%] 2xl:px-0">
                 <div className="flex gap-16 justify-center flex-col lg:flex-row">
                     <motion.div className="overflow-hidden rounded-2xl max-w-[500px] xl:min-w-[600px] xl:max-h-[300px] mx-auto lg:mx-0 order-last lg:order-first" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: false, amount: 0.5}}>
                         <img src={intro} alt="" className="object-fit-cover w-full" />

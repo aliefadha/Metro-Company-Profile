@@ -10,14 +10,14 @@
     background-image: url(/public/images/banner.svg);
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    /* height: 90vh; */
     font-family: "Poppins", sans-serif;
 }
 .banner2 {
     background-image: url(/public/images/banner.svg);
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    /* height: 50vh; */
     font-family: "Poppins", sans-serif;
 }
 
@@ -26,7 +26,98 @@
     -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
 }
 
-@media screen and (max-width: 340px) {
+@media (max-width: 413px) {
+    .banner {
+        height: 110vh;
+    }
+    .banner2 {
+        height: 10vh;
+    }
+}
+
+@media (min-width: 414px) {
+    .banner {
+        height: 80vh;
+    }
+    .banner2 {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 540px) {
+    .banner {
+        height: 100vh;
+    }
+
+    .banner2 {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 541px) {
+    .banner {
+        height: 100vh;
+    }
+    .banner2 {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 640px) {
+    .banner {
+        height: 100vh;
+    }
+    .banner2 {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner {
+        height: 100vh;
+    }
+    .banner2 {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner {
+        height: 75vh;
+    }
+    .banner2 {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    .banner {
+        height: 75vh;
+    }
+    .banner2 {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1366px) {
+    .banner {
+        height: 75vh;
+    }
+    .banner2 {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1600px) {
+    .banner {
+        height: 65vh;
+    }
+    .banner2 {
+        height: 50vh;
+    }
+}
+
+/* @media screen and (max-width: 340px) {
     .banner {
         height: 75vh;
     }
@@ -184,4 +275,4 @@
         height: 65vh;
     }
 
-}
+} */
