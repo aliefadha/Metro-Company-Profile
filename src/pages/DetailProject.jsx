@@ -4,7 +4,7 @@ import Nav from "../components/layouts/Navbar"
 import android from "../../public/images/android.png";
 import web from "../../public/images/internet.png";
 import figma from "../../public/images/figma.png";
-
+import banner from "../../public/images/banner.svg";
 import { Link } from "react-router-dom";
 import {Pagination as NextUIPagination} from "@nextui-org/react";
 import {motion} from "framer-motion";
@@ -92,7 +92,9 @@ const DetailProject = () => {
     return (
         <div>
             {/* Hero */}
-            <div className="banner2 mb-10">
+            <div className="relative overflow-hidden xl:pb-20 2xl:pb-32">
+                <img src={banner} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-[-1]" />
+
                 <div className="pb-5"></div>
                 <Nav />
                 {/* Hero */}
@@ -111,7 +113,7 @@ const DetailProject = () => {
             </div>
 
             {/* Detail */}
-            <div className="container mx-auto px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] lg:mt-0">
+            <div className="container mx-auto px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] mt-12">
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 xl:gap-16 items-center md:justify-center">
                     <div className="overflow-hidden rounded-2xl max-w-[600px] max-h-[400px] mx-3 md:mx-0">
                         <img src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${project.img}`} alt="" className="object-cover w-full shadow-lg" />

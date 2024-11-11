@@ -4,6 +4,7 @@ import Background from "../components/Elements/Background"
 import {motion} from "framer-motion";
 import intro from "../assets/metrointro.png";
 import bg from "../assets/bg.png";
+import banner from "../../public/images/banner.svg";
 import android from "../../public/images/android.png";
 import web from "../../public/images/internet.png";
 import figma from "../../public/images/figma.png";
@@ -21,10 +22,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Home = () => {
-    const ani = {
-      hidden: { opacity: 0, scale: 0, y: 500 },
-      visible: { opacity: 1, scale: 1, y:0 },
-    };
+    // const ani = {
+    //   hidden: { opacity: 0, scale: 0, y: 500 },
+    //   visible: { opacity: 1, scale: 1, y:0 },
+    // };
     const cardVariants = {
       hidden: { opacity: 0, y: 100 },
       visible: { opacity: 1, y: 0 },
@@ -203,7 +204,9 @@ const Home = () => {
     return(
         <div>
             {/* Hero */}
-            <div className="banner">
+            <div className="relative overflow-hidden">
+                <img src={banner} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-[-1]" />
+
                 <div className="pb-5"></div>
                 <Nav/>
 
@@ -225,7 +228,7 @@ const Home = () => {
             </div>
 
             {/* Intro */}
-            <div className="container mx-auto overflow-hidden px-5 2xl:max-w-[68%] 2xl:px-0">
+            <div className="container mx-auto overflow-hidden mt-32 px-5 2xl:max-w-[68%] 2xl:px-0">
                 <div className="flex gap-16 justify-center flex-col lg:flex-row">
                     <motion.div className="overflow-hidden rounded-2xl max-w-[500px] xl:min-w-[600px] xl:max-h-[300px] mx-auto lg:mx-0 order-last lg:order-first" transition={{duration: 1, delay: 1.3, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: false, amount: 0.5}}>
                         <img src={intro} alt="" className="object-fit-cover w-full" />

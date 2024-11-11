@@ -13,6 +13,7 @@ import Professional from "../../public/images/Why Us/03-Professional.png";
 import Update from "../../public/images/Why Us/04-Up to Date.png";
 import Security from "../../public/images/Why Us/05-Data Decurity.png";
 import bg from "../assets/bg.png";
+import banner from "../../public/images/banner.svg";
 import { Card, CardBody } from "@nextui-org/react";
 import {Pagination as NextUIPagination} from "@nextui-org/react";
 import {motion} from "framer-motion";
@@ -75,7 +76,9 @@ const About = () => {
     
     return (
         <div>
-            <div className="banner2">
+            <div className="relative overflow-hidden xl:pb-20 2xl:pb-32">
+                <img src={banner} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-[-1]" />
+
                 <div className="pb-5"></div>
                 <Nav />
                 {/* Hero */}
@@ -95,7 +98,7 @@ const About = () => {
             </div>
 
             {/* Vision & Mission */}
-            <div className="container mx-auto mt-5 px-5 overflow-hidden 2xl:max-w-[68%]">
+            <div className="container mx-auto mt-12 px-5 overflow-hidden 2xl:max-w-[68%]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <motion.img src={Vision} alt="" className="rounded-3xl" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}/>
                     <div className="flex flex-col justify-center">
