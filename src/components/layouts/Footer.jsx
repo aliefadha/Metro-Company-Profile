@@ -7,7 +7,7 @@ const Footer = () => {
     return(
        <div className="mt-24 bg-gradient-to-r from-black to-slate-600">
             <div className="">
-                <div className="container mx-auto pt-12">
+                <div className="container mx-auto pt-12 2xl:max-w-[68%]">
                     <div className="flex flex-col lg:flex-row justify-between gap-5">
                         <div className="lg:w-2/4 px-5 2xl:px-0 2xl:w-1/3">
                             <p className="text-[#23F9B5] text-lg lg:text-2xl">Metro Indonesian Software</p>
