@@ -322,7 +322,7 @@ const Home = () => {
                             x: {
                                 repeat: Infinity,
                                 repeatType: "loop",
-                                duration: 20,
+                                duration: 3,
                                 ease: "linear",
                             },
                         }}
