@@ -84,14 +84,14 @@ const About = () => {
                 {/* Hero */}
                 <div className="container mx-auto mt-32 2xl:mt-52 px-5">
                     <div className="flex flex-col gap-2 justify-center items-center">
-                        <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: false, amount: 0.5}}>Tentang Kami</motion.p>
+                        <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Tentang Kami</motion.p>
                         <div className="flex gap-2 mt-1">
-                            <motion.img src={Vue} alt="" transition={{duration: 1, delay: 0.8, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}/>
-                            <motion.img src={Laravel} alt="" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}/>
-                            <motion.img src={Reactjs} alt="" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}} />
-                            <motion.img src={Node} alt="" transition={{duration: 1, delay: 1.4, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}} />
-                            <motion.img src={Vscode} alt="" transition={{duration: 1, delay: 1.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}} />
-                            <motion.img src={Figma} alt="" transition={{duration: 1, delay: 1.8, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}} />
+                            <motion.img src={Vue} alt="" transition={{duration: 1, delay: 0.8, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}/>
+                            <motion.img src={Laravel} alt="" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}/>
+                            <motion.img src={Reactjs} alt="" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}} />
+                            <motion.img src={Node} alt="" transition={{duration: 1, delay: 1.4, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}} />
+                            <motion.img src={Vscode} alt="" transition={{duration: 1, delay: 1.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}} />
+                            <motion.img src={Figma} alt="" transition={{duration: 1, delay: 1.8, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}} />
                         </div>
                     </div>
                 </div>
@@ -103,14 +103,14 @@ const About = () => {
                     <motion.img src={Vision} alt="" className="rounded-3xl" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}/>
                     <div className="flex flex-col justify-center">
                         <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Our Vision</p>
-                        <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
-                        <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: false, amount: 0.5}}>Menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
+                        <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
+                        <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
                     </div>
                 </div>
                 <div className="mt-16">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Our Mission</p>
                     <div className="flex justify-start 2xl:justify-end max-w-[180px]">
-                        <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                        <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                     </div>
                     <ol className="text-slate-500 list-decimal px-5 text-sm md:text-base lg:text-sm xl:text-base">
                         <motion.li className="mb-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>Mengembangkan perangkat lunak dan solusi teknologi yang inovatif dan berkinerja tinggi untuk memenuhi kebutuhan bisnis dan industri di Indonesia.</motion.li>
@@ -127,7 +127,7 @@ const About = () => {
             <div className="mt-16 2xl:mt-32 container mx-auto overflow-hidden 2xl:max-w-[68%]">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Why US</p>
-                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
                 {/* Low Cost */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 items-center md:justify-center">
@@ -232,12 +232,12 @@ const About = () => {
              <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Meet Our Team</p>
-                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
                 <div className="gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mt-12">
                     {currentTeams && currentTeams.length > 0 ? (
                         currentTeams.map((item, index) => (
-                            <motion.div className="flex flex-col" key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: false, amount: 0.5}}>
+                            <motion.div className="flex flex-col" key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}>
                                 <Card isPressable onPress={() => console.log("item pressed")} className="w-full h-full border shadow hover:border-none relative group">
                                     <CardBody className="overflow-visible py-6">
                                         <img src={`https://api-compro.metrosoftware.id/dist/assets/img/teams/${item.img}`} alt="" className="rounded-full w-[100px] h-[100px] object-cover mx-auto mb-4 shadow-md" />

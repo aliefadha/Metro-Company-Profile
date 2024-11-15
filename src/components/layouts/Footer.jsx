@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className=" py-3 border-t-1 mt-8">
+            <div className=" py-3 mt-8">
                 <p className="text-white text-center text-xs lg:text-sm">© 2024 Metro Indonesian Software</p>
             </div>
        </div>

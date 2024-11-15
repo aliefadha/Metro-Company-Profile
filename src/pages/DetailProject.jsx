@@ -101,12 +101,12 @@ const DetailProject = () => {
                 <div className="container mx-auto mt-32 2xl:mt-52 px-5 overflow-hidden">
                     <div className="flex flex-col gap-2 justify-center items-center">
                         <div className="flex w-full max-w-[400px]">
-                            <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                            <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: true, amount: 0.5}}></motion.div>
                         </div>
-                        <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: false, amount: 0.5}}>Detail Project</motion.p>
-                        <motion.p className="text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: false, amount: 0.5}}>{project.title}</motion.p>
+                        <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Detail Project</motion.p>
+                        <motion.p className="text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>{project.title}</motion.p>
                         <div className="flex justify-end w-full max-w-[400px]">
-                            <motion.div className="pt-1 bg-[#23F9B5] w-full max-w-[120px] my-3" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                            <motion.div className="pt-1 bg-[#23F9B5] w-full max-w-[120px] my-3" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}></motion.div>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ const DetailProject = () => {
                     <div className="text-center px-5 xl:px-0 lg:text-start md:w-1/2">
                         <p className="font-semibold text-xl 2xl:text-3xl text-[#45474B]">{project.title}</p>
                         {/* <p className="text-xs text-[#A149FA]">React.js, Laravel, Node.js</p> */}
-                        <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mt-2 mx-auto lg:mx-0" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                        <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mt-2 mx-auto lg:mx-0" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
 
                         <div className="flex gap-2 mt-5 justify-center lg:justify-start">
                             {project.r_service.map((service) => (
@@ -148,13 +148,13 @@ const DetailProject = () => {
             <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">More Project's Done</p>
-                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: false, amount: 0.5}}></motion.div>
+                    <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
                 <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 mx-5 xl:mx-0">
                     {currentProjects && currentProjects.length > 0 ? (
                         currentProjects.map((item, index) => (
                         <motion.div key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}>
-                        {/* <motion.div key={item.id} isPressable onPress={() => console.log("item pressed")} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: false, amount: 0.5}}> */}
+                        {/* <motion.div key={item.id} isPressable onPress={() => console.log("item pressed")} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}> */}
                             <Card shadow="sm" isPressable onPress={() => console.log("item pressed")} className="w-full" as={Link} to={`/detail/${item.id}`}>
                             <CardBody className="overflow-visible p-0">
                                 <Image
@@ -194,7 +194,9 @@ const DetailProject = () => {
                         </motion.div>
                     ))
                     ) : (
-                        <p className="text-center text-gray-500 mt-5">No Data</p>
+                        <div className="w-full">
+                            <p className="text-center text-gray-500 mt-5">No Data</p>
+                        </div>
                     )}
                 </div>
                 <div className="flex flex-wrap gap-4 items-center mt-10 justify-center">

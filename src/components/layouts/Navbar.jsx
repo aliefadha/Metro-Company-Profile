@@ -27,7 +27,7 @@ const Nav = () => {
     return(
         <div className="container mx-auto fixed left-0 right-0 z-20">
           <div className={` ${isOpen ? "bg-transparent" : "bg-gray-400 backdrop-filter backdrop-blur-sm bg-opacity-10 border text-sm rounded-xl shadow-xl"}`}>
-            <div className="flex justify-between p-4">
+            <div className="flex justify-between p-4 2xl:py-4 2xl:px-24">
               <img src={logo} alt="Logo" className={`h-10 drop-shadow-img ${isOpen ? "hidden" : "block"} sm:block`} />
 
               {/* Navbar links */}

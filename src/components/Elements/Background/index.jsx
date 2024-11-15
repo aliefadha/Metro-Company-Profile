@@ -15,7 +15,7 @@ const Background = () => {
     };
     return (
         <div className="relative container mx-auto">
-                <motion.img src={Laptop} alt="" className="max-h-[315px] mx-auto" variants={Var} transition={{duration: 2, delay: 0.3, type: "spring"}} whileInView={"visible"} initial="hidden" viewport={{once: false, amount: 0.5}}/>
+                <motion.img src={Laptop} alt="" className="max-h-[315px] mx-auto" variants={Var} transition={{duration: 2, delay: 0.3, type: "spring"}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}/>
                 <motion.img src={Vue} alt="" className="absolute top-[-5%] left-[27%]"
                     animate={{ y: [0, 5, -5, 5, 0], x: [0, 3, -3, 3, 0] }}
                     transition={{
