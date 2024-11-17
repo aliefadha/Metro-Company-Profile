@@ -2,7 +2,7 @@ import { Button, Card, CardBody, Image } from "@nextui-org/react"
 import Nav from "../components/layouts/Navbar"
 import Background from "../components/Elements/Background"
 import {motion} from "framer-motion";
-import intro from "../assets/metrointro.png";
+import intro from "../assets/metrointro2.jpeg";
 import bg from "../assets/bg.png";
 import banner from "../../public/images/banner.svg";
 import android from "../../public/images/android.png";
@@ -214,7 +214,7 @@ const Home = () => {
                 <div className="container mx-auto text-center lg:text-start mt-32 2xl:mt-36">
                     <div className="flex gap-16 justify-center flex-col lg:flex-row lg:ps-5 2xl:ps-28">
                         <div className="order-last lg:order-first lg:w-1/2 lg:mt-12 flex flex-col justify-center">
-                            <p className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700">Metro Indonesian <span className="text-[#23F9B5] drop-shadow-img">Software</span></p>
+                            <p className="text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold ">Metro Indonesian <span className="text-[#A149FA] drop-shadow-img">Software</span></p>
                             <motion.p className="my-3 text-slate-500 text-sm md:text-base lg:text-sm xl:text-base px-5 md:px-10 lg:px-0" transition={{duration: 1, delay: 0.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>Merupakan perusahaan jasa pembuatan website, aplikasi mobile, dan sistem informasi di Kota Padang. Kami berkomitmen menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
                             <motion.div transition={{duration: 1, delay: 0.9, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
                                 <Button as={Link} to={"/about"} className=" bg-[#A149FA] font-bold text-white" size="md" variant="shadow">Get Started</Button>
@@ -231,13 +231,13 @@ const Home = () => {
             <div className="container mx-auto overflow-hidden mt-32 px-5 2xl:max-w-[68%] 2xl:px-0">
                 <div className="flex gap-16 justify-center flex-col lg:flex-row">
                     <motion.div className="overflow-hidden rounded-2xl max-w-[500px] xl:min-w-[600px] xl:max-h-[300px] mx-auto lg:mx-0 order-last lg:order-first" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}>
-                        <img src={intro} alt="" className="object-fit-cover w-full" />
+                        <img src={intro} alt="" className="object-cover w-full h-full" />
                     </motion.div>
-                    <div className="mx-5 text-center lg:w-1/2 lg:mx-0 lg:text-start order-first lg:order-last">
+                    <div className="flex flex-col gap-y-2 mx-5 text-center lg:w-1/2 lg:mx-0 lg:text-start order-first lg:order-last">
                         <motion.p className="text-xl 2xl:text-2xl text-[#A149FA] mt-10 lg:mt-5" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Introduction</motion.p>
-                        <motion.p className="text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl font-bold text-[#45474B]" transition={{duration: 1, delay: 1.1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>Get To Know Us!</motion.p>
+                        <motion.p className="text-2xl md:text-3xl lg:text-3xl 2xl:text-3xl font-bold" transition={{duration: 1, delay: 1.1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>Get To Know Us!</motion.p>
                         <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3 mx-auto lg:mx-0" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
-                        <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: true, amount: 0.5}}>Metro Indonesian Software merupakan sebuah perusahaan yang berfokus pada pengembangan perangkat lunak dan solusi teknologi dengan visi untuk menjadi perusahaan terkemuka di Indonesia, menggabungkan inovasi dan keahlian dalam pengembangan perangkat lunak dengan kebanggaan atas identitas Indonesia.</motion.p>
+                        <motion.p className="text-slate-500 md:text-justify text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: true, amount: 0.5}}>Metro Indonesian Software merupakan sebuah perusahaan yang berfokus pada pengembangan perangkat lunak dan solusi teknologi dengan visi untuk menjadi perusahaan terkemuka di Indonesia, menggabungkan inovasi dan keahlian dalam pengembangan perangkat lunak dengan kebanggaan atas identitas Indonesia.</motion.p>
                     </div>
                 </div>
             </div>
@@ -313,7 +313,7 @@ const Home = () => {
                     />
                 </div>
                 <div className="mt-12 pb-3 overflow-hidden">
-                    <motion.div
+                <motion.div
                         className="flex"
                         animate={{
                             x: [`0%`, `-${100/3}%`]
@@ -325,6 +325,9 @@ const Home = () => {
                                 duration: 3,
                                 ease: "linear",
                             },
+                        }}
+                        style={{
+                            width: 'max-content',
                         }}
                     >
                         {repeatedClients.length > 0 ? (

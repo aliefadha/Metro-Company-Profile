@@ -14,26 +14,31 @@ import { Autoplay } from "swiper/modules"
 const Contact = () => {
     const Contacts = [
         {
+            id: 1,
             img: phone,
             title: "Phone",
             desc: "+62 822-8960-8096",
         },
         {
+            id: 2,
             img: email,
             title: "Email",
             desc: "metroindo.software@gmail.com",
         },
         {
+            id: 3,
             img: map,
             title: "Address",
             desc: "Jl. Seberang Padang Utara I, Kota Padang",
         },
         {
+            id: 4,
             img: ig,
             title: "Instagram",
             desc: "@metrosoftware",
         },
         {
+            id: 5,
             img: tiktok,
             title: "Tik Tok",
             desc: "@metrosoftware",
@@ -67,9 +72,9 @@ const Contact = () => {
                     <img src={bg} alt="" className="object-fit-cover w-full h-[200px] rounded-3xl shadow-lg" />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5 px-12">
                         <div className="hidden lg:flex justify-between items-center py-4">
-                            {Contacts.map((data, i) => {
+                            {Contacts.map((data) => {
                                 return (
-                                    <div key={i} className="flex flex-col items-center">
+                                    <div key={data.id} className="flex flex-col items-center">
                                         <img src={data.img} alt="" className="h-10" />
                                         <p className="text-[#23F9B5] mt-1">{data.title}</p>
                                         <p className="text-white text-xs">{data.desc}</p>

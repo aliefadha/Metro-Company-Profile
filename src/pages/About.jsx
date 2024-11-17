@@ -102,13 +102,13 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <motion.img src={Vision} alt="" className="rounded-3xl" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}/>
                     <div className="flex flex-col justify-center">
-                        <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Our Vision</p>
+                        <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl">Our Vision</p>
                         <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                         <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
                     </div>
                 </div>
                 <div className="mt-16">
-                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Our Mission</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl">Our Mission</p>
                     <div className="flex justify-start 2xl:justify-end max-w-[180px]">
                         <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                     </div>
@@ -126,13 +126,13 @@ const About = () => {
             {/* Why Us */}
             <div className="mt-16 2xl:mt-32 container mx-auto overflow-hidden 2xl:max-w-[68%]">
                 <div className="text-center">
-                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Why US</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl">Why US</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
                 {/* Low Cost */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 items-center md:justify-center">
                     <div className="text-end flex flex-col justify-center w-2/3 md:w-1/3 order-last md:order-first px-5 md:px-0">
-                        <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>1. Low Cost</motion.p>
+                        <motion.p className="text-lg md:text-2xl font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>1. Low Cost</motion.p>
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Dengan biaya produksi yang lebih rendah, kami dapat memberikan solusi perangkat lunak berkualitas tinggi dengan harga yang lebih terjangkau, memungkinkan pengguna untuk mengoptimalkan pengeluaran.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
@@ -145,14 +145,14 @@ const About = () => {
                         <motion.img src={Quality} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                     <div className="flex flex-col justify-center w-2/3 md:w-1/3 px-5 md:px-0">
-                        <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>2. Commitment to Quality</motion.p>
+                        <motion.p className="text-lg md:text-2xl font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>2. Commitment to Quality</motion.p>
                         <motion.p className="text-xs md:text-base text-slate-500" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>Kami berkomitmen dalam memberikan produk berkualitas tinggi. Memastikan bahwa software yang dikembangkan bebas dari bug dan sesuai kebutuhan pengguna.</motion.p>
                     </div>
                 </div>
                 {/* Professional */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 items-center md:justify-center">
                     <div className="text-end flex flex-col justify-center w-2/3 md:w-1/3 order-last md:order-first px-5 md:px-0">
-                        <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>3. Professional</motion.p>
+                        <motion.p className="text-lg md:text-2xl font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>3. Professional</motion.p>
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Tim yang terampil dan berpengalaman dalam pengembangan software, sehingga produk yang dihasilkan memiliki kualitas dan performa yang unggul.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
@@ -165,14 +165,14 @@ const About = () => {
                         <motion.img src={Update} alt="" className="max-w-full max-h-full object-contain" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}} />
                    </div>
                     <div className="flex flex-col justify-center w-2/3 md:w-1/3 px-5 md:px-0">
-                        <motion.p className="text-lg md:text-2xl text-[#45474B] font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>4. Up to date</motion.p>
+                        <motion.p className="text-lg md:text-2xl font-bold" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>4. Up to date</motion.p>
                         <motion.p className="text-xs md:text-base text-slate-500" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:-50 }} viewport={{once: true, amount: 0.5}}>Selalu mengikuti perkembangan zaman. Kami menciptakan solusi yang modern dan sesuai dengan tren terkini.</motion.p>
                     </div>
                 </div>
                 {/* Professional */}
                 <div className="flex md:flex-row md:gap-20 mt-5 pb-3 items-center md:justify-center">
                     <div className="text-end flex flex-col justify-center w-2/3 md:w-1/3 order-last md:order-first px-5 md:px-0">
-                        <motion.p className="ttext-lg md:text-2xl text-[#45474B] font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>5. Data Security</motion.p>
+                        <motion.p className="ttext-lg md:text-2xl font-bold text-start" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>5. Data Security</motion.p>
                         <motion.p className="text-xs md:text-base text-slate-500 text-start" transition={{duration: 1, delay: 0.7, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x:50 }} viewport={{once: true, amount: 0.5}}>Kemanan data menjadi prioritas utama. Kami memastikan untuk melindungi data sensitif klien dan mengimplementasikan standar keamanan terkini.</motion.p>
                     </div>
                    <div className="w-1/3 md:w-1/3 order-first md:order-last">
@@ -231,7 +231,7 @@ const About = () => {
             {/* Team */}
              <div className="container mx-auto mt-32 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
-                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Meet Our Team</p>
+                    <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl ">Meet Our Team</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
                 <div className="gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mt-12">
@@ -244,7 +244,7 @@ const About = () => {
                                         <p className="text-[#A149FA] font-bold text-center text-lg">{item.name}</p>
                                         <p className="text-default-500 text-xs text-center">
                                             {item.r_skill.slice(0, 2).map((skill, skillIndex) => (
-                                                <p key={skillIndex}>{skill.skill}</p>
+                                                <span key={skillIndex}>{skill.skill}</span>
                                             ))}
                                         </p>
                                     </CardBody>

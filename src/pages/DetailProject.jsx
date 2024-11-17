@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Image } from "@nextui-org/react";
+import { Button, Card, CardBody, Image, Skeleton } from "@nextui-org/react";
 import Footer from "../components/layouts/Footer"
 import Nav from "../components/layouts/Navbar"
 import android from "../../public/images/android.png";
@@ -51,11 +51,14 @@ const DetailProject = () => {
       visible: { opacity: 1, y: 0 },
     };
 
+    const [loading, setLoading] = useState(true);
+
     const [project, setProject] = useState({ r_service: [] });
 
     const [projects, setProjects] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemPerPage = 8;
+
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -70,9 +73,13 @@ const DetailProject = () => {
 
     const location = useLocation();
     useEffect(() => {
+        window.scrollTo(0, 0);
         const id = window.location.pathname.split("/").pop();
         const fetchData = async () => {
             try {
+                setLoading(true);
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
                 // Ambil data proyek detail
                 const responseDetail = await axios.get(`https://api-compro.metrosoftware.id/api/projects/${id}`);
                 setProject(responseDetail.data.data);
@@ -85,10 +92,12 @@ const DetailProject = () => {
                 console.log("Filtered Projects:", filteredProjects);
             } catch (error) {
                 console.error('Error fetching data:', error);
+            } finally {
+                setLoading(false);
             }
-            };
-            fetchData();
-        }, [location.pathname]);
+        };
+        fetchData();
+    }, [location.pathname]);
     return (
         <div>
             {/* Hero */}
@@ -115,18 +124,33 @@ const DetailProject = () => {
             {/* Detail */}
             <div className="container mx-auto px-5 lg:px-10 2xl:px-0 2xl:max-w-[68%] mt-12">
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 xl:gap-16 items-center md:justify-center">
-                    <div className="overflow-hidden rounded-2xl max-w-[600px] max-h-[400px] mx-3 md:mx-0">
-                        <img src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${project.img}`} alt="" className="object-cover w-full shadow-lg" />
-                    </div>
-                    <div className="text-center px-5 xl:px-0 lg:text-start md:w-1/2">
-                        <p className="font-semibold text-xl 2xl:text-3xl text-[#45474B]">{project.title}</p>
+                    {loading ? (
+                        <Skeleton className="w-full max-w-[600px] h-[300px] md:h-[400px] mx-3 md:mx-0"></Skeleton>
+                    ) : (
+                        <div className="overflow-hidden max-w-[600px] max-h-[400px] mx-3 md:mx-0">
+                            <img src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${project.img}`} alt="" className="object-cover w-full shadow-lg" />
+                        </div>
+                    )}
+                    <div className="text-center px-5 xl:px-0 lg:text-start w-full md:w-1/2">
+                        {loading ?
+                            <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start">
+                                <Skeleton className="w-full h-[10px] md:h-[12px] lg:h-[15px] xl:h-[18px] 2xl:h-[20px] mb-2"></Skeleton>
+                                <Skeleton className="w-1/2 h-[10px] md:h-[12px] lg:h-[15px] xl:h-[18px] 2xl:h-[20px] mb-2"></Skeleton>
+                            </div>
+                            :
+                            <p className="font-semibold text-xl 2xl:text-3xl text-[#45474B] mb-2">{project.title}</p>}
                         {/* <p className="text-xs text-[#A149FA]">React.js, Laravel, Node.js</p> */}
-                        <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mt-2 mx-auto lg:mx-0" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
+                        {!loading && (
+                            <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mt-2 mx-auto lg:mx-0" transition={{duration: 1, delay: 0, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
+                        )}
 
                         <div className="flex gap-2 mt-5 justify-center lg:justify-start">
-                            {project.r_service.map((service) => (
-                            <div key={service.id} className="flex items-center gap-2">
-                                {service.title === "UI - UX Design" && (
+                            {loading ? (
+                                <Skeleton className="w-[20px] h-[20px] mb-2"></Skeleton>
+                            ) : (
+                                project.r_service.map((service) => (
+                                <div key={service.id} className="flex items-center gap-2">
+                                    {service.title === "UI - UX Design" && (
                                 <img src={figma} alt="UI/UX" className="w-[20px] h-[20px]" />
                                 )}
                                 {service.title === "Website Development" && (
@@ -134,12 +158,21 @@ const DetailProject = () => {
                                 )}
                                 {service.title === "Mobile Development" && (
                                 <img src={android} alt="Android" className="w-[20px] h-[20px]" />
-                                )}
-                            </div>
-                            ))}
+                                        )}
+                                    </div>
+                                ))
+                            )}
                         </div>
-                        <p className="text-slate-500 my-4 text-sm xl:text-base">{project.description}</p>
-                        <Button className="text-[#A149FA] border-[#A149FA] hover:bg-[#A149FA] hover:text-white rounded-full" size="md" variant="bordered" as={Link} to={project.link} target="_blank">Go To Website</Button>
+                        {loading ? (
+                            <Skeleton className="w-full h-[10px] 2xl:h-[20px] mb-2"></Skeleton>
+                        ) : (
+                            <p className="text-slate-500 my-4 text-sm xl:text-base">{project.description}</p>
+                        )}
+                        {!loading && (
+                            <motion.div transition={{duration: 1, delay: 0, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>
+                                <Button className="text-[#A149FA] border-[#A149FA] hover:bg-[#A149FA] hover:text-white rounded-full" size="md" variant="bordered" as={Link} to={project.link} target="_blank">Go To Website</Button>
+                            </motion.div>
+                        )}
                     </div>
                 </div>
             </div>
