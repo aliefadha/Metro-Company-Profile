@@ -31,9 +31,9 @@ const Footer = () => {
                         <div className="lg:w-1/4 px-5 2xl:px-0">
                             <p className="text-[#23F9B5] lg:text-xl">Get In Touch</p>
                             <div className="bg-white h-[1px] max-w-[100px] mt-2"></div>
-                            <p className="text-white mt-2 text-xs lg:text-xs">Seberang Padang, Padang Selatan, Kota Padang, Sumatera Barat</p>
-                            <p className="text-white mt-2 text-xs lg:text-xs">metroindo.software@gmail.com</p>
-                            <p className="text-white mt-2 text-xs lg:text-xs">+62 822-8960-8096</p>
+                            <p className="text-white mt-2 text-xs lg:text-xs">Alamat : Jl. Dr. Sutomo No.48, Simpang Haru, Kec. Padang Tim., Kota Padang, Sumatera Barat</p>
+                            <p className="text-white mt-2 text-xs lg:text-xs">No HP : 0822-8960-8096</p>
+                            <p className="text-white mt-2 text-xs lg:text-xs">Email : metroindo.software@gmail.com</p>
                         </div>
                     </div>
                 </div>

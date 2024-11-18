@@ -27,6 +27,7 @@ const Contact = () => {
             img: email,
             title: "Email",
             desc: "metroindo.software@gmail.com",
+            link: "mailto:metroindo.software@gmail.com"
             
         },
         {
