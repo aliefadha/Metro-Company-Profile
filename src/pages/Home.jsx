@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import Footer from "../components/layouts/Footer";
 
 import {Pagination as NextUIPagination} from "@nextui-org/react";
@@ -200,7 +200,7 @@ const Home = () => {
         setActiveCard(activeCard === id ? null : id); // Toggle activeCard
     };
 
-    const repeatedClients = [...(clients || []), ...(clients || []), ...(clients || [])];
+    const repeatedClients = [...(clients || [])];
     return(
         <div>
             {/* Hero */}
@@ -301,7 +301,7 @@ const Home = () => {
             </div>
 
             {/* Happy Clients */}
-            <div className="mt-32 overflow-hidden">
+            <div className="mt-32 overflow-hidden px-5 2xl:px-0 2xl:max-w-[68%] container mx-auto">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Happy Clients</p>
                     <motion.div 
@@ -312,72 +312,61 @@ const Home = () => {
                         viewport={{ once: true, amount: 0.5 }}
                     />
                 </div>
-                <div className="mt-12 pb-3 overflow-hidden">
-                <motion.div
-                        className="flex"
-                        animate={{
-                            x: [`0%`, `-${100/3}%`]
-                        }}
-                        transition={{
-                            x: {
-                                repeat: Infinity,
-                                repeatType: "loop",
-                                duration: 3,
-                                ease: "linear",
+                <div className="mt-12 pb-3 ">
+                    <Swiper 
+                        slidesPerView={1}
+                        loop={true} 
+                        autoplay={{ delay: 1500 }} 
+                        modules={[Autoplay]} 
+                        className="mt-12 mx-5 xl:mx-0"
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                            },
+                            1280: {
+                                slidesPerView: 5,
                             },
                         }}
-                        style={{
-                            width: 'max-content',
-                        }}
                     >
-                        {repeatedClients.length > 0 ? (
-                            repeatedClients.map((item, index) => (
-                                <div key={`${item.id}-${index}`} className="flex-shrink-0 w-[200px] mx-2">
-                                    <Card
-                                        shadow="sm"
-                                        isPressable
-                                        onPress={() => console.log("item pressed")}
-                                        className="w-full h-full"
-                                    >
-                                        <CardBody className="overflow-visible p-5">
-                                            <div className="flex justify-between items-center">
-                                                <Image
-                                                    width="100%"
-                                                    alt={item.title}
-                                                    className="max-w-[50px]"
-                                                    src={`https://api-compro.metrosoftware.id/dist/assets/img/clients/${item.img}`}
-                                                />
-                                                <div className="text-small">
-                                                    <p className="text-slate-800 font-semibold">
-                                                        {item.title && item.title.length > 8 
-                                                            ? `${item.title.substring(0, 8)}...` 
-                                                            : item.title}
-                                                    </p>
-                                                    <p className="text-default-500 mt-1">
-                                                        {item.desc && item.desc.length > 8 
-                                                            ? `${item.desc.substring(0, 8)}...` 
-                                                            : item.desc}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </CardBody>
-                                    </Card>
-                                </div>
-                            ))
-                        ) : (
-                            <p className="text-center text-gray-500 mt-5">No Data</p>
-                        )}
-                    </motion.div>
+                        {repeatedClients.map((item, index) => (
+                            <SwiperSlide key={index} className="py-4 px-2">
+                                <Card
+                                    shadow="sm"
+                                    isPressable
+                                    onPress={() => console.log("item pressed")}
+                                    className="w-full h-full"
+                                >
+                                     <CardBody className="overflow-visible p-5">
+                                        <div className="flex justify-center items-center h-[80px]">
+                                            <Image
+                                                alt={item.title}
+                                                className="w-auto h-auto max-w-[150px] max-h-[60px] object-contain" 
+                                                src={`https://api-compro.metrosoftware.id/dist/assets/img/clients/${item.img}`}
+                                            />
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            </SwiperSlide>
+                        ))}
+
+                    </Swiper>
                 </div>
             </div>
 
             {/* Project's Done */}
+            {projects && projects.length > 0 && (
             <div className="container mx-auto mt-20 px-5 2xl:px-0 2xl:max-w-[68%]">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Project's Done</p>
                     <motion.div className="pt-1 bg-[#A149FA] max-w-[100px] mx-auto my-3" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                 </div>
-                <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 mx-5 xl:mx-0">
+                <div className="gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 mx-5">
                     {currentProjects && currentProjects.length > 0 ? (
                         currentProjects.map((item, index) => (
                         <motion.div key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}>
@@ -387,9 +376,9 @@ const Home = () => {
                                 <Image
                                 shadow="sm"
                                 width="100%"
-                                height="70%"
+                                height="100%"
                                 alt={item.title}
-                                className="w-full object-cover h-[250px] rounded-none"
+                                className="w-full object-cover max-h-[150px] rounded-none"
                                 src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${item.img}`}
                                 />
 
@@ -436,6 +425,7 @@ const Home = () => {
                     )}
                 </div>
             </div>
+            )}
 
             {/* What People Say */}
             <div className="container mx-auto mt-32 px-10 2xl:px-0 2xl:max-w-[68%]">
@@ -473,7 +463,7 @@ const Home = () => {
                 >
                         {testimonies && testimonies.length > 0 ? (
                             testimonies.map((item) => (
-                                <SwiperSlide key={item.id} className="py-5">
+                                <SwiperSlide key={item.id} className="pt-5 pb-10">
                                     <Card shadow="sm" isPressable onPress={() => console.log("item pressed")} className="w-full h-full">
                                         <CardBody className="overflow-visible p-5">
                                             <div className="relative">

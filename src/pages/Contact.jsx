@@ -34,7 +34,7 @@ const Contact = () => {
             id: 3,
             img: map,
             title: "Address",
-            desc: "Jl. Seberang Padang Utara I, Kota Padang",
+            desc: "Jl. Dr. Sutomo No.48, Simpang Haru, Kota Padang",
             link: "https://maps.app.goo.gl/HBjB8S64koaiaaqS6"
         },
         {
@@ -82,9 +82,9 @@ const Contact = () => {
                             {Contacts.map((data) => {
                                 return (
                                     <Link to={data.link} key={data.id} className="flex flex-col items-center w-[300px] mx-4">
-                                            <img src={data.img} alt="" className="h-10" />
-                                            <p className="text-[#23F9B5] mt-1">{data.title}</p>
-                                            <p className="text-white text-center text-sm">{data.desc}</p>
+                                        <img src={data.img} alt="" className="h-10" />
+                                        <p className="text-[#23F9B5] mt-1">{data.title}</p>
+                                        <p className="text-white text-center text-xs 2xl:text-sm">{data.desc}</p>
                                     </Link>
                                 )
                             })}
