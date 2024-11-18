@@ -10,6 +10,7 @@ import banner from "../../public/images/banner.svg";
 import {motion} from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
+import { Link } from "react-router-dom";
 
 const Contact = () => {
     const Contacts = [
@@ -18,30 +19,35 @@ const Contact = () => {
             img: phone,
             title: "Phone",
             desc: "+62 822-8960-8096",
+            link: "https://wa.me/6282289608096",
         },
         {
             id: 2,
             img: email,
             title: "Email",
             desc: "metroindo.software@gmail.com",
+            
         },
         {
             id: 3,
             img: map,
             title: "Address",
             desc: "Jl. Seberang Padang Utara I, Kota Padang",
+            link: "https://maps.app.goo.gl/HBjB8S64koaiaaqS6"
         },
         {
             id: 4,
             img: ig,
             title: "Instagram",
             desc: "@metrosoftware",
+            link: "https://www.instagram.com/metrosoftware",
         },
         {
             id: 5,
             img: tiktok,
-            title: "Tik Tok",
+            title: "TikTok",
             desc: "@metrosoftware",
+            link: "https://www.tiktok.com/@metrosoftware",
         },
     ]
     return (
@@ -55,13 +61,7 @@ const Contact = () => {
                 {/* Hero */}
                 <div className="container mx-auto mt-32 2xl:mt-52 px-5">
                     <div className="flex flex-col gap-2 justify-center items-center">
-                        <div className="flex w-full max-w-[300px]">
-                            <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -50 }} viewport={{once: true, amount: 0.5}}></motion.div>
-                        </div>
                         <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} viewport={{once: true, amount: 0.5}}>Contact Us</motion.p>
-                        <div className="flex justify-end w-full max-w-[300px]">
-                            <motion.div className="pt-1 bg-[#23F9B5] w-full max-w-[120px] my-3" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}></motion.div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -70,28 +70,28 @@ const Contact = () => {
             <div className="container mx-auto mt-12 px-5 overflow-hidden 2xl:max-w-[68%] 2xl:mt-0">
                 <motion.div className="relative flex justify-center" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} viewport={{once: true, amount: 0.5}}>
                     <img src={bg} alt="" className="object-fit-cover w-full h-[200px] rounded-3xl shadow-lg" />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5 px-12">
-                        <div className="hidden lg:flex justify-between items-center py-4">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-3/5">
+                        <div className="hidden lg:flex items-center py-4">
                             {Contacts.map((data) => {
                                 return (
-                                    <div key={data.id} className="flex flex-col items-center">
-                                        <img src={data.img} alt="" className="h-10" />
-                                        <p className="text-[#23F9B5] mt-1">{data.title}</p>
-                                        <p className="text-white text-xs">{data.desc}</p>
-                                    </div>
+                                    <Link to={data.link} key={data.id} className="flex flex-col items-center w-[300px] mx-4">
+                                            <img src={data.img} alt="" className="h-10" />
+                                            <p className="text-[#23F9B5] mt-1">{data.title}</p>
+                                            <p className="text-white text-center text-sm">{data.desc}</p>
+                                    </Link>
                                 )
                             })}
                         </div>
 
                         <div className="block mt-2 lg:hidden">
-                            <Swiper spaceBetween={50} slidesPerView={1} modules={[Autoplay]} autoplay={{delay: 1000}}>
+                            <Swiper spaceBetween={50} slidesPerView={1} modules={[Autoplay]} autoplay={{delay: 3000}}>
                                 {Contacts.map((data, i) => (
                                     <SwiperSlide key={data.id}>
-                                        <div key={i} className="flex flex-col items-center">
+                                        <Link to={data.link} key={i} className="flex flex-col items-center justify-center">
                                             <img src={data.img} alt="" className="h-10" />
                                             <p className="text-[#23F9B5] text-xl mt-1 text-center">{data.title}</p>
                                             <p className="text-white text-md text-center">{data.desc}</p>
-                                        </div>
+                                        </Link>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>

@@ -5,7 +5,7 @@ import Reactjs from "../assets/react.svg";
 import Vscode from "../assets/vscode.svg";
 import Figma from "../assets/figma.svg";
 import Node from "../assets/node.svg";
-import Vision from "../../public/images/vision.jpg";
+import Vision from "../../public/images/vision2.jpeg";
 import Footer from "../components/layouts/Footer";
 import LowCost from "../../public/images/Why Us/01-Low Cost.png";
 import Quality from "../../public/images/Why Us/02-Quality.png";
