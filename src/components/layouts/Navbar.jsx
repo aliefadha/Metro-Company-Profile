@@ -1,5 +1,5 @@
 import { IoHome } from "react-icons/io5";
-import logo from "../../../public/images/metrologo2.png";
+import logo from "../../../public/images/metrologo3.png";
 import { Link } from "react-router-dom";
 import { MdContactless } from "react-icons/md";
 import { Button } from "@nextui-org/react";
@@ -56,7 +56,7 @@ const Nav = () => {
                     <p className="font-bold text-xs">KONTAK</p>
                   </div>
                 </Link>
-                <Link to="https://minervamedia.site/" className={getNavLinkClass("https://minervamedia.site/")}>
+                <Link to="https://media.metrosoftware.id/" className={getNavLinkClass("https://media.metrosoftware.id/")}>
                   <div className="flex gap-1">
                     <div className="text-md">
                       <FaGlobe />
@@ -105,7 +105,7 @@ const Nav = () => {
                     </Link>
                   </li>
                   <li className="mb-3">
-                    <Link to="https://minervamedia.site/" className={getNavLinkClass("https://minervamedia.site/")}>
+                    <Link to="https://media.metrosoftware.id/" className={getNavLinkClass("https://media.metrosoftware.id/")}>
                       Blog
                     </Link>
                   </li>
