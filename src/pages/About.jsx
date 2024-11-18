@@ -100,8 +100,10 @@ const About = () => {
             {/* Vision & Mission */}
             <div className="container mx-auto mt-12 px-5 overflow-hidden 2xl:max-w-[68%]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <motion.img src={Vision} alt="" className="rounded-3xl" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}/>
-                    <div className="flex flex-col justify-center">
+                    <div className="max-h-[265px] max-w-[472px] overflow-hidden">
+                        <motion.img src={Vision} alt="" className="rounded-3xl w-full h-full object-cover" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 50 }} viewport={{once: true, amount: 0.5}}/>
+                    </div>
+                        <div className="flex flex-col justify-center">
                         <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl">Our Vision</p>
                         <motion.div className="pt-1 bg-[#A149FA] w-full max-w-[100px] my-3" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} viewport={{once: true, amount: 0.5}}></motion.div>
                         <motion.p className="text-slate-500 text-sm md:text-base lg:text-sm xl:text-base" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} viewport={{once: true, amount: 0.5}}>Menjadi perusahaan terkemuka di industri perangkat lunak dan solusi teknologi di Indonesia serta menghasilkan inovasi yang memberdayakan bisnis dan masyarakat.</motion.p>
