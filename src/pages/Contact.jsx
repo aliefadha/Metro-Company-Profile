@@ -11,6 +11,7 @@ import {motion} from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Contact = () => {
     const Contacts = [
@@ -50,6 +51,11 @@ const Contact = () => {
             link: "https://www.tiktok.com/@metrosoftware",
         },
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div>
             {/* Hero */}

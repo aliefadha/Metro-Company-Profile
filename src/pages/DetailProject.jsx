@@ -78,7 +78,6 @@ const DetailProject = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                await new Promise(resolve => setTimeout(resolve, 2000));
 
                 // Ambil data proyek detail
                 const responseDetail = await axios.get(`https://api-compro.metrosoftware.id/api/projects/${id}`);
