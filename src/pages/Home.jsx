@@ -200,7 +200,7 @@ const Home = () => {
         setActiveCard(activeCard === id ? null : id); // Toggle activeCard
     };
 
-    const repeatedClients = [...(clients || [])];
+    const repeatedClients = [...(clients || []), ...(clients || []), ...(clients || [])];
     return(
         <div>
             {/* Hero */}
@@ -301,7 +301,7 @@ const Home = () => {
             </div>
 
             {/* Happy Clients */}
-            <div className="mt-32 overflow-hidden px-5 2xl:px-0 2xl:max-w-[68%] container mx-auto">
+            <div className="mt-32 overflow-hidden  container mx-auto">
                 <div className="text-center">
                     <p className="font-bold text-2xl md:text-3xl lg:text-2xl 2xl:text-3xl text-[#45474B]">Happy Clients</p>
                     <motion.div 
@@ -313,30 +313,26 @@ const Home = () => {
                     />
                 </div>
                 <div className="mt-12 pb-3 ">
-                    <Swiper 
-                        slidesPerView={1}
-                        loop={true} 
-                        autoplay={{ delay: 1500 }} 
-                        modules={[Autoplay]} 
-                        className="mt-12 mx-5 xl:mx-0"
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 2,
-                            },
-                            768: {
-                                slidesPerView: 3,
-                            },
-                            1024: {
-                                slidesPerView: 4,
-                            },
-                            1280: {
-                                slidesPerView: 5,
+                    <motion.div
+                        className="flex mt-12 mx-5 xl:mx-0 "
+                        animate={{
+                            x: [`0%`, `-${100/3}%`]
+                        }}
+                        transition={{
+                            x: {
+                                repeat: Infinity,
+                                duration: 30,
+                                repeatType: "loop",
                             },
                         }}
+                        style={{
+                            width: 'max-content',
+                        }}
                     >
-                        {repeatedClients.map((item, index) => (
-                            <SwiperSlide key={index} className="py-4 px-2">
-                                <Card
+                        {repeatedClients.length > 0 ? (
+                            repeatedClients.map((item, index) => (
+                                <div key={`${item.id}-${index}`} className="flex-shrink-0 w-[200px] mx-2">
+                                     <Card
                                     shadow="sm"
                                     isPressable
                                     onPress={() => console.log("item pressed")}
@@ -352,10 +348,12 @@ const Home = () => {
                                         </div>
                                     </CardBody>
                                 </Card>
-                            </SwiperSlide>
-                        ))}
-
-                    </Swiper>
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-center text-gray-500 mt-5">No Data</p>
+                        )}
+                    </motion.div>
                 </div>
             </div>
 
