@@ -400,7 +400,7 @@ const Home = () => {
                                 </div>
 
                                 <div className="px-5 min-h-[40px] text-xs">
-                                    <p className="text-default-500 text-small">{item.description && item.description.length > 80 ? `${item.description.substring(0, 80)}...` : item.description}</p>
+                                    <p className="text-default-500 text-small truncate">{item.description && item.description.length > 80 ? `${item.description.substring(0, 80)}...` : item.description}</p>
                                 </div>
                             </CardBody>
                         </Card>
