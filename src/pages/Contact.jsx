@@ -65,7 +65,7 @@ const Contact = () => {
     return (
         <div>
             {/* Hero */}
-            <div className="relative overflow-hidden xl:pb-20 2xl:pb-32">
+            <div className="relative overflow-hidden pb-10 xl:pb-20 2xl:pb-32">
                 <img src={banner} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover opacity-50 z-[-1]" />
 
                 <div className="pb-5"></div>
@@ -74,7 +74,7 @@ const Contact = () => {
                 <div className="container mx-auto mt-32 2xl:mt-52 px-5">
                     <div className="flex flex-col gap-2 justify-center items-center">
                         <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} viewport={{once: true, amount: 0.5}}>Contact Us</motion.p>
-                        <div className="flex gap-2 mt-1">
+                        <div className="flex gap-4 mt-1">
                             <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
                                 <img src={whatsapp} alt="" className="w-4/6 h-4/6 md:w-3/5 md:h-3/5 object-contain"/>
                             </motion.div>
