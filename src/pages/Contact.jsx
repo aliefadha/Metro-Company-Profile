@@ -2,6 +2,11 @@ import Footer from "../components/layouts/Footer"
 import Nav from "../components/layouts/Navbar"
 import bg from "../assets/bg.png";
 import phone from "../../public/images/phone.svg";
+import instagram from "../../public/images/instagram.svg";
+import gmail from "../../public/images/gmail.svg";
+import tt from "../../public/images/tt.svg";
+import whatsapp from "../../public/images/whatsapp.svg";
+import maps from "../../public/images/maps.svg";
 import email from "../../public/images/email.svg";
 import map from "../../public/images/map.svg";
 import ig from "../../public/images/ig.svg";
@@ -69,6 +74,25 @@ const Contact = () => {
                 <div className="container mx-auto mt-32 2xl:mt-52 px-5">
                     <div className="flex flex-col gap-2 justify-center items-center">
                         <motion.p className="text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-slate-700" transition={{duration: 1, delay: 0.5, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0.5 }} viewport={{once: true, amount: 0.5}}>Contact Us</motion.p>
+                        <div className="flex gap-2 mt-1">
+                            <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1.6, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
+                                <img src={whatsapp} alt="" className="w-4/6 h-4/6 md:w-3/5 md:h-3/5 object-contain"/>
+                            </motion.div>
+                            <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
+                                <img src={gmail} alt="" className="w-4/6 h-4/6 md:w-3/5 md:h-3/5 object-contain"/>
+                            </motion.div>
+                            <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1.2, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
+                                <img src={maps} alt="" className="w-4/6 h-4/6 md:w-3/5 md:h-3/5 object-contain"/>
+                            </motion.div>
+                            
+                            <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
+                                <img src={instagram} alt="" className="w-3/6 h-3/6 md:w-3/5 md:h-3/5 object-contain"/>
+                            </motion.div>
+                            <motion.div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl" transition={{duration: 1, delay: 1.4, type: "spring", stiffness: 100}} whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -50 }} viewport={{once: true, amount: 0.5}}>
+                                <img src={tt} alt="" className="w-4/6 h-4/6 md:w-3/5 md:h-3/5 object-contain"/>
+                            </motion.div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
