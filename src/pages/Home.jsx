@@ -170,10 +170,10 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 const [servicesResponse, clientsResponse, projectsResponse, testimoniesResponse] = await Promise.all([
-                    axios.get('https://api-compro.metrosoftware.id/api/services'),
-                    axios.get('https://api-compro.metrosoftware.id/api/clients'),
-                    axios.get('https://api-compro.metrosoftware.id/api/projects'),
-                    axios.get('https://api-compro.metrosoftware.id/api/testimonies'),
+                    axios.get(`${import.meta.env.VITE_API_URL}/services`),
+                    axios.get(`${import.meta.env.VITE_API_URL}/clients`),
+                    axios.get(`${import.meta.env.VITE_API_URL}/projects`),
+                    axios.get(`${import.meta.env.VITE_API_URL}/testimonies`),
                 ]);
 
                 setServices(servicesResponse.data.data);
@@ -279,7 +279,7 @@ const Home = () => {
                                                 height="100%"
                                                 alt={item.title}
                                                 className="w-full h-full object-cover"
-                                                src={`https://api-compro.metrosoftware.id/dist/assets/img/services/${item.img}`}
+                                                src={`${import.meta.env.VITE_ASSETS_URL}/services/${item.img}`}
                                             />
                                             </div>
                                         </div>
@@ -345,7 +345,7 @@ const Home = () => {
                                             <Image
                                                 alt={item.title}
                                                 className="w-auto h-auto max-w-[150px] max-h-[60px] object-contain" 
-                                                src={`https://api-compro.metrosoftware.id/dist/assets/img/clients/${item.img}`}
+                                                src={`${import.meta.env.VITE_ASSETS_URL}/clients/${item.img}`}
                                             />
                                         </div>
                                     </CardBody>
@@ -379,7 +379,7 @@ const Home = () => {
                                 height="100%"
                                 alt={item.title}
                                 className="w-full object-cover max-h-[150px] rounded-none"
-                                src={`https://api-compro.metrosoftware.id/dist/assets/img/projects/${item.img}`}
+                                src={`${import.meta.env.VITE_ASSETS_URL}/projects/${item.img}`}
                                 />
 
                                 <div className="flex justify-between px-5 pt-5 pb-2 text-sm">
@@ -471,7 +471,7 @@ const Home = () => {
                                             </div>
                                             <div className="flex z-10 items-center gap-3 mb-1">
                                                     <div className="rounded-full overflow-hidden w-[50px] h-[50px] shadow-md">
-                                                        <img src={`https://api-compro.metrosoftware.id/dist/assets/img/comments/${item.img}`} alt="" className="w-full object-cover h-full" />
+                                                        <img src={`${import.meta.env.VITE_ASSETS_URL}/comments/${item.img}`} alt="" className="w-full object-cover h-full" />
                                                     </div>
                                                     <div className="">
                                                         <p className="text-slate-800 font-semibold">

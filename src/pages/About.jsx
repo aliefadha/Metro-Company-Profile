@@ -51,7 +51,7 @@ const About = () => {
      useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://api-compro.metrosoftware.id/api/dashboard');
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/dashboard`);
                 setProgress(response.data.data);
                 console.log(response.data.data);
             } catch (error) {
@@ -64,7 +64,7 @@ const About = () => {
      useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://api-compro.metrosoftware.id/api/teams');
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/teams`);
                 setTeams(response.data.data);
                 console.log(response.data.data);
             } catch (error) {
@@ -242,7 +242,7 @@ const About = () => {
                             <motion.div className="flex flex-col" key={item.id} variants={cardVariants} transition={{duration: 1, delay: index * 0.3, type: "spring", stiffness: 100}} whileInView={"visible"} initial="hidden" viewport={{once: true, amount: 0.5}}>
                                 <Card isPressable onPress={() => console.log("item pressed")} className="w-full h-full border shadow hover:border-none relative group">
                                     <CardBody className="overflow-visible py-6">
-                                        <img src={`https://api-compro.metrosoftware.id/dist/assets/img/teams/${item.img}`} alt="" className="rounded-full w-[100px] h-[100px] object-cover mx-auto mb-4 shadow-md" />
+                                        <img src={`${import.meta.env.VITE_ASSETS_URL}/teams/${item.img}`} alt="" className="rounded-full w-[100px] h-[100px] object-cover mx-auto mb-4 shadow-md" />
                                         <p className="text-[#A149FA] font-bold text-center text-lg">{item.name}</p>
                                         <p className="text-default-500 text-xs text-center">
                                             {item.r_skill.slice(0, 2).map((skill, skillIndex) => (
