@@ -323,6 +323,8 @@ const Home = () => {
                                 repeat: Infinity,
                                 duration: 30,
                                 repeatType: "loop",
+                                duration: 20,
+                                ease: "linear",
                             },
                         }}
                         style={{
